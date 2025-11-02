@@ -62,16 +62,17 @@ export default function GamePanel({ seconds = 30 }) {
     if (!playing) {
         return (
             <div className = "grid gap-3 place-items-center">
-                <button className=" bg-blue-400 text-white font-sans p-2 rounded-lg shadow hover:bg-blue-600 transition" onClick={start}> Start ({seconds}s)</button>
-                <p> Score: {score} </p>
+                <button className="bg-blue-400 text-black font-sans font-semibold p-2 rounded-lg shadow hover:bg-blue-600 transition" 
+                onClick={start}> Start ({seconds}s)</button>
+                <p className = "text-black font-sans"> Score: {score} </p>
             </div>
         );
     }
 
     return (
-        <div style={{ display: "grid", gap: "12px" }}>
-            <div> Time : <strong>{timeLeft}</strong></div>
-            <div style={{ fontSize: 30, fontWeight: "bold" }}>
+        <div className ="grid gap-4">
+            <div className = "text-black"> Time : <strong>{timeLeft}</strong></div>
+            <div className="fontsize-2xl font-semibold text-black">
                 {question.x} {question.operation} {question.y} = ?
             </div>
 
@@ -80,8 +81,9 @@ export default function GamePanel({ seconds = 30 }) {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && submit()}
             placeholder ="Type answer and press Enter"
+            className = "text-black"
         />
-        <div>Score : <strong>{score}</strong></div>
+        <div className = "text-black">Score : <strong>{score}</strong></div>
         </div>
 
 
