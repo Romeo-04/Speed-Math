@@ -61,8 +61,8 @@ export default function GamePanel({ seconds = 30 }) {
 
     if (!playing) {
         return (
-            <div style={{ display: "grid", gap: "12px" }}>
-                <button onClick={start}> Start ({seconds}s)</button>
+            <div className = "grid gap-3 place-items-center">
+                <button className=" bg-blue-400 text-white font-sans p-2 rounded-lg shadow hover:bg-blue-600 transition" onClick={start}> Start ({seconds}s)</button>
                 <p> Score: {score} </p>
             </div>
         );
