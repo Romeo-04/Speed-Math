@@ -1,4 +1,6 @@
-export default function startButton() {
+"use client";
+
+export default function StartButton() {
     return (
         <button style={{
             backgroundColor: "#4eba7bff",
@@ -8,7 +10,9 @@ export default function startButton() {
             cursor: "pointer",
             fontSize: "16px",
             borderRadius: "5px"
-        }} onClick={() => alert("Game Started!")}>
+        }} 
+
+        onClick={() => alert("Game Started!")}>
             Start
         </button>
     );

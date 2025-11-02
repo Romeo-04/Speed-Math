@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import startButton from "./components/startButton";
+import StartButton from "./components/startButton";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to Speed Math!
           </h1>
-        {startButton()}
+        <StartButton />
 
       </main>
     </div>
